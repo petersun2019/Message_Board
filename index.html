@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内容记录页面</title>
+    <style>
+        .title-area {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .title-english {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .title-chinese {
+            font-size: 24px;
+            color: #666;
+        }
+        .container {
+            max-width: 600px;
+            margin: 160px auto 20px auto;
+            padding: 20px;
+        }
+        .input-area {
+            margin-bottom: 20px;
+        }
+        #userInput {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        #contentList {
+            border-top: 1px solid #ccc;
+            padding-top: 0;
+            position: relative;
+        }
+        .content-header {
+            display: grid;
+            grid-template-columns: 1fr 150px 200px;
+            gap: 10px;
+            padding: 10px;
+            border-bottom: 2px solid #333;
+            font-weight: bold;
+            background-color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        .content-items-container {
+            margin-top: 10px;
+        }
+        .content-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: 1fr 150px 200px;
+            gap: 10px;
+            align-items: center;
+        }
+        .content-text {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+            min-width: 0;
+            padding-right: 10px;
+        }
+        .content-ip {
+            color: #666;
+            font-size: 0.9em;
+            text-align: center;
+        }
+        .content-time {
+            color: #666;
+            font-size: 0.9em;
+            text-align: right;
+        }
+        .header-ip {
+            text-align: center;
+        }
+        .header-time {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-area">
+        <div class="title-english">Message Board</div>
+        <div class="title-chinese">留言板</div>
+    </div>
+    <div class="container">
+        <div class="input-area">
+            <textarea id="userInput" placeholder="请输入内容..."></textarea>
+            <button onclick="submitContent()">提交</button>
+        </div>
+        <div id="contentList">
+            <div class="content-header">
+                <span>内容</span>
+                <span class="header-ip">IP地址</span>
+                <span class="header-time">日期时间</span>
+            </div>
+            <div class="content-items-container">
+                <!-- 内容将在这里显示 -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
